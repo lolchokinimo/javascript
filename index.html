@@ -14,11 +14,11 @@
 
     <script>
         // console.log is print
-        console.log('Hello world'); 
+        console.log('Hello world');
         // creating a variable
         let num1 = 2;
         let num2 = 5;
-        let sum =num1 + num2;
+        let sum = num1 + num2;
         console.log(sum)
 
         // strings
@@ -27,18 +27,74 @@
         let full_name = first_name + " " + last_name
         console.log(full_name.slice(1))
         // replaces 'john' to 'jane'
-        full_name = full_name.replace("John", "Jane") 
+        full_name = full_name.replace("John", "Jane")
         console.log(full_name.split(""))
         console.log(full_name.lastIndexOf("o")); // returns the index of the letter o
         full_name = full_name.concat("", "kimani");
-        full_name =full_name.toLowerCase().trim()
+        full_name = full_name.toLowerCase().trim()
         // slices between index 5and7
-        full_name = full_name.slice(5,7);
+        full_name = full_name.slice(5, 7);
         console.log(full_name);
         // .trim()
         // .toLowerCae().trim()
         // .endsWith("doe")
         // .includes()
+
+        // list
+        let arr = [ 1,2,3,4,5,'John', false,[6,7,[8,20,['jane','joe'.true]]],11]
+        console.log(arr[7][2][2][2])
+        // 3d array
+        let arr2 = [
+            [1,2,3],
+            [4,5,6]
+        ]
+
+        // updating elements in an array 
+        let arrr= [1, 2,'John Doe']
+        arrr[2] = 'jane doe'
+        console.log(arrr)
+        // determine the size of an array - no of elements in an array
+        let size = arrr.length
+        console.log('Array size' ,size)
+
+        // adding elements at the end array method push is used.
+        arrr.push(12,13,14,false,"glory")
+        console.log('Pushed array',arr)
+        // adding elements at the start array method unshift is used.
+        arrr.unshift('javascript','python')
+        console.log('unshift array',arrr)
+        // removing elements at the end array method .pop() is used.
+        arrr.pop()
+        console.log('popped array', arrr)
+        // removing elements at the start array method .shift() is used.
+        arrr.shift()
+        console.log('shifted array', arrr)
+
+        arrr.reverse()
+        console.log('reversed array', arrr)
+
+        // splice removes elements from the specified index
+        arr.splice([4]) 
+        console.log('splice array',arr)
+
+        let arr1 = arrr.join('/')
+        console.log('join',arr1)
+
+        // checks if a value exists in an array returns a boolean 
+        console.log(arr1.includes('python'))
+
+        // lastindexof - last occurrence of an element in an array returns -1 if the element is not found
+        console.log(arr1.lastIndexOf(90))
+
+        let array1 = [1,2,3]
+        let array2 = [0,5.6,6]
+        let result =array1.concat(array2)
+        console.log('concat',result)
+
+        
+
+
+
 
 
     </script>
