@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>javascript objects</p>
+    <script>
+        let person = {
+            name: 'Stacy',
+            age: 20,
+            height: '170cm',
+            job: 'engineer',
+            ismarried: true,
+            "full address": 'nairobi'
+        }
+        console.log(person)
+
+        // accessing values ..using the dot notation/bracket notation
+        let height = person.height
+        console.log(height)
+        console.log(person["age"])
+        console.log(person["full address"])
+
+
+        let key = "name"
+        // bracket notation has this advantage,this is equal to console.log(person.name).
+        console.log(person[key])
+
+
+        // nested objects
+        let user = {
+        name: "Alice",
+        hobbies: ["cycling", "painting"],
+        posts: [
+          {
+            id: 1,
+            title: "My first post",
+            comments: [
+              { id: 101, text: "Great post!" },
+              { id: 102, text: "Thanks for sharing." },
+            ],
+          },
+          {
+            id: 2,
+            title: "Another day",
+            comments: [],
+          },
+        ],
+      };
+
+      console.log(user.posts[0].comments[1].text)
+
+    //   object methods
+    // objects.keys(object)-name of the your keys
+    console.log(Object.keys(user))
+    // object.values(objectname) gives the list of values in an Object, object.entries gives the entire object
+    let values = Object.values(user)
+    let entries = Object.entries(user)
+    console.log(values)
+    console.log(entries)
+    // task 75 and 76
+    </script>
+
+</body>
+
+</html>
