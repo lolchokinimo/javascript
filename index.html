@@ -41,28 +41,28 @@
         // .includes()
 
         // list
-        let arr = [ 1,2,3,4,5,'John', false,[6,7,[8,20,['jane','joe'.true]]],11]
+        let arr = [1, 2, 3, 4, 5, 'John', false, [6, 7, [8, 20, ['jane', 'joe'.true]]], 11]
         console.log(arr[7][2][2][2])
         // 3d array
         let arr2 = [
-            [1,2,3],
-            [4,5,6]
+            [1, 2, 3],
+            [4, 5, 6]
         ]
 
         // updating elements in an array 
-        let arrr= [1, 2,'John Doe']
+        let arrr = [1, 2, 'John Doe']
         arrr[2] = 'jane doe'
         console.log(arrr)
         // determine the size of an array - no of elements in an array
         let size = arrr.length
-        console.log('Array size' ,size)
+        console.log('Array size', size)
 
         // adding elements at the end array method push is used.
-        arrr.push(12,13,14,false,"glory")
-        console.log('Pushed array',arr)
+        arrr.push(12, 13, 14, false, "glory")
+        console.log('Pushed array', arr)
         // adding elements at the start array method unshift is used.
-        arrr.unshift('javascript','python')
-        console.log('unshift array',arrr)
+        arrr.unshift('javascript', 'python')
+        console.log('unshift array', arrr)
         // removing elements at the end array method .pop() is used.
         arrr.pop()
         console.log('popped array', arrr)
@@ -74,11 +74,11 @@
         console.log('reversed array', arrr)
 
         // splice removes elements from the specified index
-        arr.splice([4]) 
-        console.log('splice array',arr)
+        arr.splice([4])
+        console.log('splice array', arr)
 
         let arr1 = arrr.join('/')
-        console.log('join',arr1)
+        console.log('join', arr1)
 
         // checks if a value exists in an array returns a boolean 
         console.log(arr1.includes('python'))
@@ -86,35 +86,48 @@
         // lastindexof - last occurrence of an element in an array returns -1 if the element is not found
         console.log(arr1.lastIndexOf(90))
 
-        let array1 = [1,2,3]
-        let array2 = [0,5.6,6]
-        let result =array1.concat(array2)
-        console.log('concat',result)
+        let array1 = [1, 2, 3]
+        let array2 = [0, 5.6, 6]
+        let result = array1.concat(array2)
+        console.log('concat', result)
 
-        
+
 
         // splice - removing elements, the 1,is the index to start then the 2 is number of elements to be removed
-        let fruits =['mango','apple','banana','orange']
-        fruits.splice(1,2)
+        let fruits = ['mango', 'apple', 'banana', 'orange']
+        fruits.splice(1, 2)
         console.log(fruits)
 
         // splice -adding elements . 2-starting point, 0-how many elements to delete, 7 & 8 -are values to be added
-        let numbers = [1,2,3,4,5]
-        numbers.splice(2,0,7,8)
-        console.log('splice adding',numbers)
+        let numbers = [1, 2, 3, 4, 5]
+        numbers.splice(2, 0, 7, 8)
+        console.log('splice adding', numbers)
 
         // splice -replace elements. 
         // splice works in 3 ways, the first deletes
-        let names = ['jane','john','kamau']
-        names.splice[1,2,'mike']
-        console.log('splice replace',names)
+        let names = ['jane', 'john', 'kamau']
+        names.splice[1, 2, 'mike']
+        console.log('splice replace', names)
 
 
-        // objects
-        
+        // TYPE CASTING
+        // numbers  to change  a string to number. Number(string)
+        let data = '123'
+        let num = Number(data)
+        console.log(typeof (num))
+        // parseFloat
+        let float = parseFloat(data)
+        console.log(typeof (float))
+        // number to string 
+        let numi =123
+        let str = String(numi)
+        console.log(str)
+        let string = numi.toString()
+        console.log(typeof(string))
 
 
-        
+
+
 
 
 

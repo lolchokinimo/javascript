@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>spread operator</p>
+    <script>
+        // spread operator -- 
+        // how it works :used to copy arrays it uses ...
+        let num = [1,2,3,4,5]
+        let num2 =[...num]
+        console.log(num2)
+        // merging arrays 
+        let n = [1,2,3,4,5]
+        let nu = [6,7,8,9,10]
+        let num3 = [...n,...nu]
+        console.log(num3)
+
+        //coppying objects
+        let table ={
+            height:'90cm',
+            width: '100cm'
+        }
+        let table2=[
+            ...table
+        ]
+        console.log(table2)
+
+        // merging objects
+        let tabl ={
+            height:'90cm',
+            width: '100cm'
+        }
+        let tab ={
+            height:'90cm',
+            width: '100cm'
+        }
+        let table3={
+            ...tabl,...tab
+        }
+        console.log(table3)
+
+
+    </script>
+</body>
+</html>
