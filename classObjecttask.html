@@ -85,12 +85,14 @@
         console.log(company.departments.engineering.teams.backend.members[0].languages[2])
         // true in docker
         console.log(company.departments.engineering.teams.backend.members[1].certifications.docker)
+        
         // dispaly the keys of certifications and their length 
         console.log(company.departments.engineering.teams.backend.members[1].certifications)
         let certifications = company.departments.engineering.teams.backend.members[1].certifications
         let length = Object.keys(certifications).length
         console.log(length)
         console.log(Object.keys(certifications))
+
         // dispaly the value of skills ,their lengths and reverse their order 
         console.log(company.departments.engineering.teams.frontend.members[1].skills)
         let skills = company.departments.engineering.teams.frontend.members[1].skills
