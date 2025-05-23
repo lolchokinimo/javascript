@@ -30,8 +30,9 @@
         full_name = full_name.replace("John", "Jane")
         console.log(full_name.split(""))
         console.log(full_name.lastIndexOf("o")); // returns the index of the letter o
-        full_name = full_name.concat("", "kimani");
+        full_name = full_name.concat(" ", "kimani");
         full_name = full_name.toLowerCase().trim()
+        console.log(full_name)
         // slices between index 5and7
         full_name = full_name.slice(5, 7);
         console.log(full_name);
@@ -121,7 +122,7 @@
         // number to string 
         let numi =123
         let str = String(numi)
-        console.log(str)
+        console.log(typeof(str))
         let string = numi.toString()
         console.log(typeof(string))
 

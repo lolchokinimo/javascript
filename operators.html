@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p>javascript operators</p>
+
+    <script>
+        // arithmetic
+        // operator overloading
+        // will take  concat outomatically operation if one of the value is a string
+        let x = '5'
+        let y = '5'
+        console.log(x + y)
+        // will take arithmetic
+        let z = 5
+        let t = '5'
+        console.log(z + t)
+
+        // comparison operator
+        // strict equality and inequality
+        // -comparison in both value and data type. if == is used javascript will do type conversion.
+        // - to return true operands have to be equal in both value and   data type 
+        let h = 5
+        let j = '5'
+        console.log(h === j)
+        // strict inequality 
+        console.log(h !== j)
+
+        // conditional statements
+        // if...else if...else 
+        // conditional statements are written in block form. using {}
+        // if (condtion){
+        //     statement to execute
+        // }
+        // else{
+        //     statement to execute
+        // }
+        let g = 5
+        if (x == 5) {
+            console.log("number is 5")
+        } else {
+            console.log("number is not 5")
+        }
+        
+        // formatted string 
+        // a dollar sign $ and backticks is used. 
+        console.log(`number is ${g}`)
+
+
+
+
+
+    </script>
 </body>
+
 </html>
