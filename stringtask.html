@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>javascript string task</p>
+
+
+    <script>
+        // Clean up the following variable to give the clean version in lower case. Using inbuilt methods in the string class
+        //     f_name = “  JOHn.“ to “john”
+        let f_name = "     JOHn"
+        f_name = f_name.trim().toLowerCase()
+        console.log(f_name)
+
+        // Slice the below string to get you the resulting sentence:
+        // a .sentence_one = “The Dog Breed is German Shepherd” only display “Breed is German”
+        let sentence_one = 'The Dog Breed is German Shepherd'
+        sentence_one = sentence_one.slice(7, -9)
+        console.log(sentence_one)
+        // b. sentence_two = “Defeats for the Clinton forces, this was her moment of triumph” only display “Clinton forces”
+        let sentence_two = 'Defeats for the Clinton forces, this was her moment of triumph'
+        sentence_two = sentence_two.slice(15, -32)
+        console.log(sentence_two)
+
+        // 3. Split the below sentence using a semicolon i.e; And display length of the result. 
+        // “The lazy dog; ran so fast; it hit the wall.”
+        let sentence = 'The lazy dog; ran so fast; it hit the wall.'
+        sentence =sentence.split(";")
+        console.log(sentence.length)
+        console.log(sentence)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
