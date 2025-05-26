@@ -47,11 +47,27 @@
         } else {
             console.log("number is not 5")
         }
-        
+
         // formatted string 
         // a dollar sign $ and backticks is used. 
         console.log(`number is ${g}`)
 
+        // ternary operator
+        // this is a short-hand for writing if...else... statement in JS 
+        // syntax: condition? expression_if_true: expression_if_false 
+        let isuser = false
+        let user = isuser ? "logged in" : "invalid"
+        console.log(user)
+        // tasks
+        // checkif a number is positive 
+        let number = prompt('enter number')
+        number >= 0 ? console.log('positive number') : console.log('negative number')
+        // check if a string is empty 
+        let string = prompt('enter string')
+        string === "" ? console.log('null') : console.log('not null')
+        // check if a variable is null
+        let variable = prompt('enter variable')
+        variable===null ? console.log('null') : console.log('no variable entered')
 
 
 
