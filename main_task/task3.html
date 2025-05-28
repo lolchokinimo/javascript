@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>task3</p>
+<p>Validates the phone number by checking if it starts with +254.. or 07.. or 7… or 254.. or 01... or  1.. 
+#Convert the number to start with +254… </p>
+<body>
+    <script>
+        function phone_validator() {
+            let p = prompt('enter your phone number')
+            if (p(0,4)== '+254' && p.length==13) {
+                console.log( p +' is a valid phone number')
+            }else if (p.startsWith('07') || p.startsWith('1') & p.length==9 ){
+                let x = p(1) + '+254'
+                console.log( x + 'the number is now valid')
+            }
+            
+        }
+        phone_validator()
+    </script>
+</body>
+</html>

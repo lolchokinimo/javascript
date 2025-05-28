@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p>function tasks</p>
     <script>
         // write a funtion ...
+
         // 1.that accepts a string as a parameter and converts the first letter of each word of the string in upper case
+        // for the first  word 
         function uppercase(letter) {
-            let lett = letter.split(' ')
-            let capitalized = lett.charAT(0).toUpperCase() + lett.slice(1)
-            let capitalizedword = capitalized.join(' ')
-            console.log(capitalizedword)
+            let lett = String(letter).split('').sort().join('');
+            console.log(lett)
         }
         let letter = 'jva scripy and you'
         uppercase(letter)
-        
+
+        let sentence = String(prompt('enter word(s) string'))
+        let arr = sentence.split(' ')
+        for (i = 0; i < arr.length; i++) {
+            let upper = String(arr[i]).slice(0, 1).toUpperCase() + String(arr[i]).slice(1).toLowerCase()
+            arr[i] = upper
+
+        }
+        console.log(arr)
+
+
+
         // 2.to calculate multiplication and division of two numbers.
-       
+        function cal(num1, num2) {
+            let multiplication = num1 * num2;
+            let division = num2 !== 0 ? (num1 / num2) : "Cannot divide by zero";
+
+            console.log(`Multiplication of ${num1} and ${num2} is: ${multiplication}`);
+            console.log(`Division of ${num1} by ${num2} is: ${division}`);
+        }
+        let x = prompt('enter nummber 1')
+        let y = prompt('enter nummber 2')
+        cal(x, y)
+
+
         // 3.that accept two intergers and display the larger.
-        
+
         //  4. to clone/ dublpicate an array
+
+        let array1 = [2, 'gmm', 5, 'hjkm']
+        let array2 = [...array1]
+        console.log(array2)
     </script>
 </body>
+
 </html>
