@@ -48,6 +48,34 @@
         const add_numbers2 = (num1,num2) => num1 + num2
         
         sum2 = add_numbers2(1,2)
+
+        // call back functions 
+        function greet (name,callback){
+            console.log(`Hello ${name}`)
+            callback()
+        }
+        function sayGoodbye(){
+            console.log('Goodbye')
+        }
+        // the fuction is called inside the greet function
+        greet('alice',sayGoodbye)
+        // i.e do research on call back function. used mostly in javascript frameworks 
+        // research on: asynchronous and synchronous 
+
+        // FUNCTION Expression 
+        // is when you define a function inside an expression ussually when asigning it to a variable 
+        // a simple fuction looks like this
+        // reaserch on : hoisting
+
+        // function great(){
+        //     console.log('hello')
+        // }
+
+        // function expression
+        const great = function(){
+            console.log('hello')
+        }
+        great()
     </script>
 </body>
 </html>

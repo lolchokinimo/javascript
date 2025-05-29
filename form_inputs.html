@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>form input</p>
+    <h1 id="num1">3</h1>
+    <h2 id="num2">4</h2>
+    <h3 id="num3"></h3>
+    <script>
+        // JS helps us access and manipulate form inputs real time 
+        // js can read user input,validate user input, dynamically update pages based on input
+        // Process
+        // 1. user fills Form
+        // 2. js reads input values
+        // 3. js processes the data (calculations,modifications)
+        // document.getElementById() - method used to select and access a single html element by its unique id attribute 
+
+        // 1. .innerHTML = full HTML content inside a tag/Element
+        // 2. .innerTEXT = visible text inside an element 
+        // 3. .value = only accesses user input in forms only
+let num1= Number(document.getElementById('num1'))
+let num2= Number(document.getElementById('num2'))
+let num3= num1 + num2
+document.getElementById('num3').innerHTML = num3
+
+    </script>
+</body>
+
+</html>
