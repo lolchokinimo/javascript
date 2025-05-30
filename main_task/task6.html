@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>#Write a program that lets the user input a password.
+        #Give them only 4 attempts to check the passwords entered against “admin@123”.
+        #If the password is correct access is granted. After you show them a message , the account is blocked</p>
+    <script>
+        function password_checker(password) {
+            let saved_passwords = 'admin@23'
+            let attempts = 4
+            for (let i = 1; i < attempts.length; i++) {
+               
+                if (password == saved_passwords) {
+                    console.log('access granted')
+                } else {
+                    let remaining_attempts = attempts - i
+                    if (remaining_attempts > 0) {
+                        console.log(`try again ${remaining_attempts} attempts remaining`)
+                    } else {
+                        console.log('account blocked')
+                    }
+                }
+
+            }
+        }
+         let password = prompt('enter password')
+        password_checker(password)
+    </script>
+</body>
+
+</html>

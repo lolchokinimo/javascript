@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>#Write a program which accepts email as form input or from terminal. Validate the email by checking if it's a
+        valid email.
+        #Hint: Check if it contains an “@” symbol and “.” symbol.</p>
+    <form action="">
+        <label for="">email</label>
+        <input type="text" id="email">
+    </form>
+    <script>
+        function email_checker(email) {
+            
+            if (email.includes('@') && email.includes('.')) {
+                console.log(`${email} is a valid email`)
+            } else {
+                console.log('enter valid email')
+            }
+        }
+        let email = prompt('eneter email')
+        console.log(email_checker(email))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>#Implement a program that takes 3 users inputs from the terminal or the Browser, and stores them in three
+        variables.
+        #Return the largest of the three. Do this without using the the inbuilt max () function!</p>
+    <script>
+        let input1 = prompt('enter 1st input')
+        let input2 = prompt('enter 2st input')
+        let input3 = prompt('enter 3st input')
+        function largest_checker(input1,input2,input3) {
+            if (input1 >= input2 && input1 >= input3) {
+                let res = input1
+            } else if (input2 >= input1 && input2 >= input3) {
+                let res = input2
+            } else if (input3 >= input1 && input3 >= input2) {
+                let res = input3
+            }
+            return res
+        }
+        console.log(largest_checker(input1,input2,input3))
+
+    </script>
+</body>
+
+</html>

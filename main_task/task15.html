@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // #calculating gross salary
+        function grossSalary(basic_salary, benefits) {
+            return basic_salary + benefits;
+        }
+// #calculating nhif
+        function calcNHIF(gross) {
+            let nhi_contribution;
+            if (gross <= 5999) {
+                nhi_contribution = 150;
+            } else if (gross <= 7999) {
+                nhi_contribution = 300;
+            } else if (gross <= 11999) {
+                nhi_contribution = 400;
+            } else if (gross <= 14999) {
+                nhi_contribution = 500;
+            } else if (gross <= 19999) {
+                nhi_contribution = 600;
+            } else if (gross <= 24999) {
+                nhi_contribution = 750;
+            } else {
+                nhi_contribution = 1700;
+            }
+            return nhi_contribution;
+        }
+        // #calculating nssf
+        function calcNSSF(gross, rate = 6) {
+            let result = (gross * rate) / 100;
+            return result < 18000 ? result : 18000;
+        }
+
+        // #calculate NHDF
+        function calcNHDF(gross) {
+            return gross * 0.015;
+        }
+
+        // #calculate the taxable income
+        function calcTaxable(gross, nssf, nhdf, nhif) {
+            return gross - (nssf + nhdf + nhif);
+        }
+        //  calculating payee 
+        function calcPAYEE(taxable, relief = 2400) {
+            let paye;
+            if (taxable < 24000) {
+                paye = (taxable * 0.10) - relief;
+            } else if (taxable <= 32333) {
+                paye = (taxable * 0.25) - relief;
+            } else if (taxable < 500000) {
+                paye = (taxable * 0.30) - relief;
+            } else if (taxable < 800000) {
+                paye = (taxable * 0.325) - relief;
+            } else {
+                paye = (taxable * 0.35) - relief;
+            }
+            return paye;
+        }
+
+        // #calculate net salary
+        function calcNetSalary(gross, nhif, nhdf, nssf, payee) {
+            return gross - (nhif + nhdf + nssf + payee);
+        }
+
+        // executing the codes 
+        const basic_salary = parseFloat(prompt("Enter basic salary: "));
+        const benefits = parseFloat(prompt("Enter benefits: "));
+
+        const gross = grossSalary(basic_salary, benefits);
+        console.log(`Gross Salary: ${gross}`);
+
+        const nhif = calcNHIF(gross);
+        console.log(`NHIF Contribution: ${nhif}`);
+
+        const nssf = calcNSSF(gross);
+        console.log(`NSSF Contribution: ${nssf}`);
+
+        const nhdf = calcNHDF(gross);
+        console.log(`NHDF Contribution: ${nhdf}`);
+
+        const taxable_income = calcTaxable(gross, nssf, nhdf, nhif);
+        console.log(`Taxable Income: ${taxable_income}`);
+
+        const payee = calcPAYEE(taxable_income);
+        console.log(`PAYEE: ${payee}`);
+
+        const net_salary = calcNetSalary(gross, nhif, nhdf, nssf, payee);
+        console.log(`Your Net Salary is: ${net_salary}`);
+
+    </script>
+</body>
+
+</html>

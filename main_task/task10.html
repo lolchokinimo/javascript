@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>#Write a program that calculates the total stock in a company from the array/list below if we know that the stock
+        is the last digit in every array/list.
+        #prods = [[‘omo’,’30kshs’,’300’], [‘milk’,’50kshs’,’200’],[‘bread’,’45kshs’,’359’], [‘coffee’,’5kshs’,’79’]]</p>
+    <script>
+        //     let prods = [['omo', '30kshs', '300'], ['milk', '50kshs', '200'], ['bread', '45kshs', '359'], ['coffee', '5kshs', '79']]
+        //     function clac(){
+        //     let total_stock = 0
+        //     for (let i = 0; i < prods.length; i++) {
+        //         total_stock += i(2)
+        //         console.log(total_stock)
+
+        //     }
+        // }
+        let prods = [
+            ['omo', '30kshs', '300'],
+            ['milk', '50kshs', '200'],
+            ['bread', '45kshs', '359'],
+            ['coffee', '5kshs', '79']
+        ];
+
+        function calc(prods) {
+            let total_stock = 0;
+            for (let i = 0; i < prods.length; i++) {
+                let stock = Number(prods[i][2]);  // Convert stock to number
+                total_stock += stock;
+            }
+            console.log("Total stock:", total_stock);
+        }
+
+        calc(prods);
+
+    </script>
+</body>
+
+</html>
